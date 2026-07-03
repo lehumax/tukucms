@@ -1,0 +1,23 @@
+{
+	"pages": [
+		{
+			"path": "pages/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationBarBackgroundColor": "#07c160",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/webview",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "耗时",
+		"navigationBarBackgroundColor": "#07c160"
+	}
+}
