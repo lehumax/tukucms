@@ -1,0 +1,65 @@
+{
+  "id": "4410479",
+  "name": "preview",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1418245",
+      "name": "右",
+      "font_class": "you",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "5439979",
+      "name": "左",
+      "font_class": "zuo",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "7594037",
+      "name": "24gl-minimize",
+      "font_class": "24gl-minimize",
+      "unicode": "ea6b",
+      "unicode_decimal": 60011
+    },
+    {
+      "icon_id": "7594410",
+      "name": "24gl-zoomIn",
+      "font_class": "24gl-zoomIn",
+      "unicode": "ea98",
+      "unicode_decimal": 60056
+    },
+    {
+      "icon_id": "7594411",
+      "name": "24gl-zoomOut",
+      "font_class": "24gl-zoomOut",
+      "unicode": "ea99",
+      "unicode_decimal": 60057
+    },
+    {
+      "icon_id": "5387862",
+      "name": "关闭_o",
+      "font_class": "guanbi_o",
+      "unicode": "eb76",
+      "unicode_decimal": 60278
+    },
+    {
+      "icon_id": "8229196",
+      "name": "向右旋转",
+      "font_class": "xiangyouxuanzhuan",
+      "unicode": "e66a",
+      "unicode_decimal": 58986
+    },
+    {
+      "icon_id": "8229197",
+      "name": "向左旋转",
+      "font_class": "xiangzuoxuanzhuan",
+      "unicode": "e66b",
+      "unicode_decimal": 58987
+    }
+  ]
+}
