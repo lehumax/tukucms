@@ -1,0 +1,71 @@
+const check = [
+{id:"1",number:"01",color:"红",shengXiao:"龙",wuXing:"火"},
+{id:"2",number:"02",color:"红",shengXiao:"兔",wuXing:"金"},
+{id:"3",number:"03",color:"蓝",shengXiao:"虎",wuXing:"金"},
+{id:"4",number:"04",color:"蓝",shengXiao:"牛",wuXing:"土"},
+{id:"5",number:"05",color:"绿",shengXiao:"鼠",wuXing:"土"},
+{id:"6",number:"06",color:"绿",shengXiao:"猪",wuXing:"木"},
+{id:"7",number:"07",color:"红",shengXiao:"狗",wuXing:"木"},
+{id:"8",number:"08",color:"红",shengXiao:"鸡",wuXing:"火"},
+{id:"9",number:"09",color:"蓝",shengXiao:"猴",wuXing:"火"},
+{id:"10",number:"10",color:"蓝",shengXiao:"羊",wuXing:"金"},
+{id:"11",number:"11",color:"绿",shengXiao:"马",wuXing:"金"},
+{id:"12",number:"12",color:"红",shengXiao:"蛇",wuXing:"水"},
+{id:"13",number:"13",color:"红",shengXiao:"龙",wuXing:"水"},
+{id:"14",number:"14",color:"蓝",shengXiao:"兔",wuXing:"木"},
+{id:"15",number:"15",color:"蓝",shengXiao:"虎",wuXing:"木"},
+{id:"16",number:"16",color:"绿",shengXiao:"牛",wuXing:"火"},
+{id:"17",number:"17",color:"绿",shengXiao:"鼠",wuXing:"火"},
+{id:"18",number:"18",color:"红",shengXiao:"猪",wuXing:"土"},
+{id:"19",number:"19",color:"红",shengXiao:"狗",wuXing:"土"},
+{id:"20",number:"20",color:"蓝",shengXiao:"鸡",wuXing:"水"},
+{id:"21",number:"21",color:"绿",shengXiao:"猴",wuXing:"水"},
+{id:"22",number:"22",color:"绿",shengXiao:"羊",wuXing:"木"},
+{id:"23",number:"23",color:"红",shengXiao:"马",wuXing:"木"},
+{id:"24",number:"24",color:"红",shengXiao:"蛇",wuXing:"金"},
+{id:"25",number:"25",color:"蓝",shengXiao:"龙",wuXing:"金"},
+{id:"26",number:"26",color:"蓝",shengXiao:"兔",wuXing:"土"},
+{id:"27",number:"27",color:"绿",shengXiao:"虎",wuXing:"土"},
+{id:"28",number:"28",color:"绿",shengXiao:"牛",wuXing:"水"},
+{id:"29",number:"29",color:"红",shengXiao:"鼠",wuXing:"水"},
+{id:"30",number:"30",color:"红",shengXiao:"猪",wuXing:"火"},
+{id:"31",number:"31",color:"蓝",shengXiao:"狗",wuXing:"火"},
+{id:"32",number:"32",color:"绿",shengXiao:"鸡",wuXing:"金"},
+{id:"33",number:"33",color:"绿",shengXiao:"猴",wuXing:"金"},
+{id:"34",number:"34",color:"红",shengXiao:"羊",wuXing:"土"},
+{id:"35",number:"35",color:"红",shengXiao:"马",wuXing:"土"},
+{id:"36",number:"36",color:"蓝",shengXiao:"蛇",wuXing:"木"},
+{id:"37",number:"37",color:"蓝",shengXiao:"龙",wuXing:"木"},
+{id:"38",number:"38",color:"绿",shengXiao:"兔",wuXing:"火"},
+{id:"39",number:"39",color:"绿",shengXiao:"虎",wuXing:"火"},
+{id:"40",number:"40",color:"红",shengXiao:"牛",wuXing:"金"},
+{id:"41",number:"41",color:"蓝",shengXiao:"鼠",wuXing:"金"},
+{id:"42",number:"42",color:"蓝",shengXiao:"猪",wuXing:"水"},
+{id:"43",number:"43",color:"绿",shengXiao:"狗",wuXing:"水"},
+{id:"44",number:"44",color:"绿",shengXiao:"鸡",wuXing:"木"},
+{id:"45",number:"45",color:"红",shengXiao:"猴",wuXing:"木"},
+{id:"46",number:"46",color:"红",shengXiao:"羊",wuXing:"火"},
+{id:"47",number:"47",color:"蓝",shengXiao:"马",wuXing:"火"},
+{id:"48",number:"48",color:"蓝",shengXiao:"蛇",wuXing:"土"},
+{id:"49",number:"49",color:"绿",shengXiao:"龙",wuXing:"土"}
+]
+
+const banner=[{
+		id:0,
+		src:'../../static/img/banner0.png'
+	},
+	{
+			id:1,
+			src:'../../static/img/banner1.png'
+	},
+	{
+			id:2,
+			src:'../../static/img/banner2.png'
+	},
+]
+
+// 定义数据出口
+export default {
+	check:check,
+	banner:banner
+}

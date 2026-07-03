@@ -1,0 +1,268 @@
+@import './mixins.scss';
+@import './var.scss';
+body,page {
+	--red: #e54d42;
+	--orange: #f37b1d;
+	--yellow: #fbbd08;
+	--olive: #8dc63f;
+	--green: #07c160;
+	--cyan: #1cbbb4;
+	--blue: #0081ff;
+	--purple: #6739b6;
+	--mauve: #9c26b0;
+	--pink: #e03997;
+	--brown: #a5673f;
+	--grey: #8799a3;
+	--black: #333333;
+	--darkGray: #666666;
+	--gray: #aaaaaa;
+	--ghostWhite: #f1f1f1;
+	--white: #ffffff;
+	/* 浅色 */
+	--redLight: #fadbd9;
+	--orangeLight: #fde6d2;
+	--yellowLight: #fef2ce;
+	--oliveLight: #e8f4d9;
+	--greenLight: #d7f0db;
+	--cyanLight: #d2f1f0;
+	--blueLight: #cce6ff;
+	--purpleLight: #e1d7f0;
+	--mauveLight: #ebd4ef;
+	--pinkLight: #f9d7ea;
+	--brownLight: #ede1d9;
+	--greyLight: #e7ebed;
+	/* 渐变色 */
+	--redGradual: linear-gradient(45deg, #f43f3b, #ec008c);
+	--orangeGradual: linear-gradient(45deg, #ff9700, #ed1c24);
+	--greenGradual: linear-gradient(45deg, #39b54a, #8dc63f);
+	--purpleGradual: linear-gradient(45deg, #9000ff, #5e00ff);
+	--pinkGradual: linear-gradient(45deg, #ec008c, #6739b6);
+	--blueGradual: linear-gradient(45deg, #0081ff, #1cbbb4);
+
+	/* 阴影透明色 */
+	--ShadowSize: 0px 0px 8rpx;
+	--whiteShadow: rgba(0, 0, 0, 0.15);
+	--redShadow: rgba(204, 69, 59, 0.2);
+	--orangeShadow: rgba(217, 109, 26, 0.2);
+	--yellowShadow: rgba(224, 170, 7, 0.2);
+	--oliveShadow: rgba(124, 173, 55, 0.2);
+	--greenShadow: rgba(48, 156, 63, 0.3);
+	--cyanShadow: rgba(28, 187, 180, 0.2);
+	--blueShadow: rgba(0, 102, 204, 0.2);
+	--purpleShadow: rgba(88, 48, 156, 0.2);
+	--mauveShadow: rgba(133, 33, 150, 0.2);
+	--pinkShadow: rgba(199, 50, 134, 0.2);
+	--brownShadow: rgba(140, 88, 53, 0.2);
+	--greyShadow: rgba(114, 130, 138, 0.2);
+	--grayShadow: rgba(114, 130, 138, 0.2);
+	--blackShadow: rgba(26, 26, 26, 0.16);
+	--primary-font-size:24rpx;
+	--form-label-width:5em;
+	font-size:24rpx;
+}
+::-webkit-scrollbar {
+	width: 4px;
+	height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #bfbfbf;
+	border-radius: 6px;
+}
+
+::-webkit-scrollbar-corner {
+	display: none;
+}
+
+[class*=diygw-] {
+	font-size: inherit;
+}
+view,
+scroll-view,
+swiper,
+button,
+input,
+textarea,
+label,
+navigator,
+image {
+	box-sizing: border-box;
+}
+.htmlcontent{
+	white-space: pre-line;
+	width: 100%;
+}
+.clearfix{
+	box-sizing: border-box;
+	clear: both;
+	&::before,&::after{
+		clear: both;
+		display: table;
+	}
+}
+
+.scroll-view ::-webkit-scrollbar,.uni-scroll-view::-webkit-scrollbar,.uni-scroll-view-content::-webkit-scrollbar,.scroll-view::-webkit-scrollbar,scroll-view::-webkit-scrollbar{
+	width: 0;
+	height: 0;
+	color: transparent;
+	display: none;
+}
+
+.hidden{
+	display: none  !important;
+}
+.pointer{
+	cursor: pointer;
+}
+.container{
+	background-size: cover;
+	background-position:top center;
+	min-height: 100vh;
+}
+.placeholder{
+	color:#c0c4cc
+}
+.diygw-bg{
+	position: relative;
+	&::after{
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		z-index: -1;
+		bottom: 0;
+		opacity: 1;
+		-webkit-transform: scale(1, 1);
+		transform: scale(1, 1);
+		background-size: 100% 100%;
+		background-image: var(--diygw-image);
+	}
+}
+.diygw-ellipsis{
+    overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.response {
+	width: 100%;
+	&>view {
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+	}
+}
+.diygw-autoview{
+	position: relative;
+}
+.diygw-safe-bottom{
+	padding-bottom: 0;
+	padding-bottom: constant(safe-area-inset-bottom);
+	padding-bottom: env(safe-area-inset-bottom);
+} 
+
+.uni-tabbar-bottom,.uni-page-head,.uni-picker-container{
+	z-index:999999
+}
+.uni-sample-toast,uni-toast,uni-modal,.uni-modal{
+	z-index:9999999 !important;
+}
+.uni-picker-container{
+	z-index:9999999 !important
+}
+.diygw-autoview{
+	position: relative;
+	overflow: hidden;
+}
+.diygw-dropdown {
+	overflow: inherit !important;
+}
+
+.diygw-absolute,.diygw-absolute-bottom{
+	position: absolute !important;
+	z-index: 999;
+}
+.diygw-absolute-bottom{
+	top:inherit !important;
+	bottom:0
+}
+
+.diygw-top{
+	position: fixed !important;
+	z-index:999999;
+	left:0px;
+	top:0px;
+	width:100%;
+}
+.not-border{
+	border:0 !important;
+	&::after,&::before{
+		border:0 !important;
+	}
+	&.diygw-tag{
+		padding-left:0;
+	}
+}
+.font-normal{
+	font-weight: normal;
+}
+
+.font-bold{
+	font-weight: bold;
+}
+.border{
+	border:0;
+}
+.width-auto{
+	width: auto !important;
+}
+[class*=diy-icon-]{
+	font-family: "diygwui" !important;
+	font-size: 32rpx;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@each $direction in $diygw-directions {
+	@include set-border($direction);
+}
+@each $size in $diygw-sizes {
+	@include set-margin($size);
+	@include set-padding($size);
+}
+@import './col.scss';
+@import './shadow.scss';
+@import './bar.scss';
+@import './button.scss';
+@import './radius.scss';
+@import './text.scss';
+@import './flex.scss';
+@import './form.scss';
+@import './tag.scss';
+@import './radio.scss';
+@import './grid.scss';
+@import './card.scss';
+@import './swiper.scss';
+@import './avatar.scss';
+@import './background.scss';
+@import './title.scss';
+@import './floatbar.scss';
+@import './modal.scss';
+@import './list.scss';
+@import './timeline.scss';
+@import './steps.scss';
+@import './tabs.scss';
+@import './noticebar.scss';
+@import './progress.scss';
+@import './collapse.scss';
+@import './cubes.scss';
+@import './search.scss';
+
+.diy-sticky-100{
+	width: 100% !important;
+	background-color: #fff;
+	&.diygw-absolute,.diygw-top,.diygw-bottom,.left-bottom,.left-top,.right-bottom,.right-top{
+		position: static !important;
+	}
+}

@@ -1,0 +1,118 @@
+/* ==================
+          按钮
+ ==================== */
+ @import './var.scss';
+
+
+.diygw-btn,.diygw-btn-default {
+  position: relative;
+  border: 0px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  overflow: visible;
+   border-radius: 0;
+  transform: translate(0px, 0px);
+}
+.diygw-btn-default{
+	padding:0px;
+	margin:0px;
+}
+
+.diygw-btn-default::after,.diygw-btn::after {
+  display: none;
+}
+
+.diygw-btn:not([class*="bg-"]) {
+  background-color: transparent;
+}
+
+.diygw-btn[class*="line"] {
+  background-color: transparent;
+}
+
+.diygw-btn[class*="line"]::after {
+  content: " ";
+  display: block;
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1rpx solid currentColor;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  box-sizing: border-box;
+  border-radius: $diygw-radius;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.diygw-btn[class*="lines"]::after {
+  border: 6rpx solid currentColor;
+}
+
+.diygw-btn[class*="bg-"]::after {
+  display: none;
+}
+
+.diygw-btn .diygw-btn-icon {
+  border-radius: 500px;
+  padding: 0;
+  margin-right:6rpx;
+  font-size: inherit;
+}
+
+
+.diygw-btn.button-hover {
+  transform: translate(1rpx, 1rpx);
+}
+
+.block {
+  display: block;
+}
+
+.diygw-btn.block {
+  display: flex;
+  width: 100%;
+}
+
+.diygw-btn[disabled] {
+  opacity: 0.6;
+}
+
+.button-icon{
+	font-size: inherit;
+}
+
+@mixin set-button($type) {
+  @if $type == none {
+    .diygw-btn {
+      padding: 0 map-get($diygw-padding, $type);
+      font-size: map-get($diygw-font-sizes, $type);
+      height: map-get($diygw-height, $type);
+    }
+    .diygw-btn.diygw-icon {
+      width: map-get($diygw-height, $type);
+      height: map-get($diygw-height, $type);
+    }
+  } @else {
+    .diygw-btn.#{$type} {
+      padding: 0 map-get($diygw-padding, $type);
+      font-size: map-get($diygw-font-sizes, $type);
+      height: map-get($diygw-height, $type);
+    }
+    .diygw-btn.diygw-icon.#{$type} {
+      width: map-get($diygw-font-sizes, $type);
+      height: map-get($diygw-font-sizes, $type);
+    }
+  }
+}
+
+@each $type in $diygw-sizes {
+  @include set-button($type);
+}

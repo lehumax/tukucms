@@ -1,0 +1,77 @@
+$diygw-colors: 'red','orange','yellow','olive','green','cyan','blue','purple','mauve','pink','brown','grey','black','white';
+$diygw-graduals :'red','orange','green','purple','pink','blue';
+
+$diygw-directions: none top right bottom left;
+
+$diygw-sizes: none xs sm md lg xl;
+
+$diygw-radius-width: (
+	'none': 24rpx,
+	'xs': 6rpx,
+	'sm': 16rpx,
+	'md': 24rpx,
+	'lg': 32rpx,
+	'xl': 200px
+);
+
+$diygw-radius2-width: (
+	'none': 48rpx,
+	'xs': 6px,
+	'sm': 32rpx,
+	'md': 48rpx,
+	'lg': 64rpx,
+	'xl': 400px
+);
+
+
+
+$diygw-font-sizes: (
+    'none': 14px,
+    'xs': 20rpx,
+    'sm': 24rpx,
+    'md': 14px,
+    'lg': 48rpx,
+    'xl': 64rpx
+);
+
+$diygw-radius: 6px;
+$diygw-margin: (
+	'none': 20rpx,
+    'xs': 10rpx,
+    'sm': 20rpx,
+    'md': 24rpx,
+    'lg': 40rpx,
+    'xl': 60rpx
+);
+
+
+$diygw-padding: (
+'none': 20rpx,
+    'xs': 10rpx,
+    'sm': 20rpx,
+    'md': 24rpx,
+    'lg': 40rpx,
+    'xl': 60rpx
+) ;
+
+
+$diygw-height: (
+    'none': 64rpx,
+    'xs': 48rpx,
+    'sm': 56rpx,
+    'md': 64rpx,
+    'lg': 40px,
+    'xl': 60px
+);
+
+$diygw-lineheight: (
+    'none': 24px,
+    'xs': 20px,
+    'sm': 24px,
+    'md': 28px,
+    'lg': 32px,
+    'xl': 48px
+);
+
+
+

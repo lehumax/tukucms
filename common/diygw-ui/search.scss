@@ -1,0 +1,53 @@
+
+
+/* ==================
+         搜索条
+ ==================== */
+
+ .diygw-search {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	padding: 10rpx;
+	box-sizing: border-box;
+	width: 100%;
+	min-width: 0;
+	color: var(--black);
+	line-height: 48rpx;
+	text-align: left;
+	background-color: transparent;
+	resize: none;
+	position: relative;
+	.flex{
+		.diygw-tag,[class*="diy-icon-"]{
+			margin-right: 10rpx;
+			height: 48rpx;
+		}
+	}
+	.flex1{
+		background: transparent;
+	}
+	
+	.icon-right{
+		width:50rpx;
+	}
+	.diygw-icon{
+		width:50rpx;
+		height:50rpx;
+		margin-right: 10rpx;
+	}
+	.right-icon{
+		width:64rpx;
+		height:64rpx;
+	}
+}
+
+
+.search.flex{
+	padding-right:0px;
+	display: flex;
+	.flex1{
+		width: 100%;
+		background: transparent;
+	}
+}

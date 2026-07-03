@@ -1,0 +1,143 @@
+
+
+/* ==================
+         模态窗口
+ ==================== */
+
+.diygw-modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1110;
+	opacity: 0;
+	outline: 0;
+	text-align: center;
+	-ms-transform: scale(1.185);
+	transform: scale(1.185);
+	backface-visibility: hidden;
+	perspective: 1000px;
+	background: rgba(0, 0, 0, 0.6);
+	transition: all 0.3s ease-in-out 0s;
+	pointer-events: none;
+	.diygw-bar .content {
+		width: calc(100% - 80rpx);
+	}
+	.diygw-dialog-content{
+		float: none !important;
+		text-align: left;
+		flex-wrap: wrap;
+	}
+}
+
+.basic{
+
+	.basis-xs {
+		width: 20%;
+	}
+
+	.basis-sm {
+		width: 40%;
+	}
+
+	.basis-df {
+		width: 50%;
+	}
+
+	.basis-lg {
+		width: 85%;
+	}
+
+	.basis-xl {
+		width: 80%;
+	}
+
+}
+.diygw-modal::before {
+	content: "\200B";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.diygw-modal.show {
+	opacity: 1;
+	transition-duration: 0.3s;
+	-ms-transform: scale(1);
+	transform: scale(1);
+	overflow-x: hidden;
+	overflow-y: auto;
+	pointer-events: auto;
+}
+
+.diygw-dialog {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: auto;
+	margin-right: auto;
+	width: 340px;
+	max-width: 100%;
+	background-color: #f8f8f8;
+	border-radius: 10rpx;
+	overflow: hidden;
+
+    &.bg-none{
+        background-color: rgba(0, 0, 0, 0) !important;
+    }
+
+}
+
+.diygw-modal.bottom-modal::before {
+	vertical-align: bottom;
+}
+
+.diygw-modal.bottom-modal .diygw-dialog {
+	width: 100%;
+	border-radius: 0;
+}
+
+.diygw-modal.bottom-modal {
+	margin-bottom: -500px;
+}
+
+.diygw-modal.bottom-modal.show {
+	margin-bottom: 0;
+}
+
+
+.diygw-modal.drawer-left-modal,.diygw-modal.drawer-right-modal {
+	transform: scale(1);
+	display: flex;
+}
+
+.diygw-modal.drawer-right-modal{
+	justify-content: flex-end;
+}
+
+.diygw-modal.drawer-left-modal .diygw-dialog,.diygw-modal.drawer-right-modal .diygw-dialog {
+	height: 100%;
+	min-width: 100px;
+	border-radius: 0;
+	margin: initial;
+	transition-duration: 0.3s;
+}
+
+.diygw-modal.drawer-left-modal .diygw-dialog {
+	transform: translateX(-100%);
+}
+
+.diygw-modal.drawer-right-modal .diygw-dialog {
+	transform: translateX(100%);
+}
+
+.diygw-modal.drawer-right-modal.show .diygw-dialog,.diygw-modal.drawer-left-modal.show .diygw-dialog {
+	transform: translateX(0%);
+}
+
+.diygw-modal .diygw-dialog>.diygw-bar:first-child .action{
+	min-width: 80rpx;
+	margin-right: 0;
+	min-height: 50rpx;
+}

@@ -1,0 +1,117 @@
+
+/* ==================
+         进度条
+ ==================== */
+
+@keyframes progress-stripes {
+	from {
+		background-position: 72rpx 0;
+	}
+
+	to {
+		background-position: 0 0;
+	}
+}
+.diygw-progress {
+	overflow: hidden;
+	height: 28rpx;
+	background-color: #ebeef5;
+	display: inline-flex;
+	align-items: center;
+	width: 100%;
+
+	.diygw-progress-content{
+		line-height: 1;
+		width: 0;
+		height: 100%;
+		align-items: center;
+		display: flex;
+		justify-items: flex-end;
+		justify-content: space-around;
+		font-size: 10px;
+		color: var(--white);
+		transition: width 0.6s ease;
+	}
+
+	&.striped {
+		.diygw-progress-content{
+			background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+			background-size: 72rpx 72rpx;
+		}
+		&.active{
+			.diygw-progress-content{
+				animation: progress-stripes 2s linear infinite;
+			}
+
+		}
+	}
+}
+
+
+.load-progress {
+	pointer-events: none;
+	top: 0;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	z-index: 2000;
+}
+
+.load-progress.hide {
+	display: none;
+}
+
+.load-progress .load-progress-bar {
+	position: relative;
+	width: 100%;
+	height: 4rpx;
+	overflow: hidden;
+	transition: all 200ms ease 0s;
+}
+
+.load-progress .load-progress-spinner {
+	position: absolute;
+	top: 10rpx;
+	right: 10rpx;
+	z-index: 2000;
+	display: block;
+}
+
+.load-progress .load-progress-spinner::after {
+	content: "";
+	display: block;
+	width: 12px;
+	height: 12px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border: solid 4rpx transparent;
+	border-top-color: inherit;
+	border-left-color: inherit;
+	border-radius: 50%;
+	-webkit-animation: load-progress-spinner 0.4s linear infinite;
+	animation: load-progress-spinner 0.4s linear infinite;
+}
+
+@-webkit-keyframes load-progress-spinner {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes load-progress-spinner {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}

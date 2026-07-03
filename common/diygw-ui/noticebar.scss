@@ -1,0 +1,87 @@
+/* ==================
+         消息组件
+ ==================== */
+.diy-notice-bar {
+  overflow: hidden;
+  width: 100%;
+}
+
+.diy-direction-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.diy-left-icon {
+  align-items: center;
+}
+
+.diy-notice-box {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  margin-left: 12rpx;
+}
+
+.diy-right-icon {
+  margin-left: 12rpx;
+  display: inline-flex;
+  align-items: center;
+}
+
+.diy-notice-content {
+  animation: diy-loop-animation 10s linear infinite both;
+  text-align: right;
+  // 这一句很重要，为了能让滚动左右连接起来
+  padding-left: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.diy-notice-img {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  object-fit: contain;
+}
+.diy-notice-text {
+  font-size: 28rpx;
+  word-break: keep-all;
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+}
+
+@keyframes diy-loop-animation {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+.diy-notice-swiper {
+  height: 40rpx;
+}
+.diy-notice-swiper {
+  height: 40rpx;
+  align-items: center;
+  justify-content: center;
+}
+.diy-notice-item{
+	white-space: nowrap;
+}
+.diy-notice-item + .diy-notice-item {
+  margin-left: 20rpx;
+}
+
+.diy-notice-swiper-item {
+  display: block;
+  height: 40rpx;
+  width: 100%;
+  line-height: 40rpx;
+  text-align: left;
+}

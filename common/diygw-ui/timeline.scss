@@ -1,0 +1,81 @@
+
+/* ==================
+         时间轴
+ ==================== */
+
+ .diygw-timeline {
+	display: block;
+	background-color: var(--white);
+	width:100%;
+	
+	.diygw-time {
+		width: 100%;
+		text-align: left;
+		padding: 20rpx 0;
+		font-size: 26rpx;
+		font-weight: bold;
+		color: #888;
+		display: block;
+	}
+	>.diygw-item {
+		padding: 30rpx 30rpx 30rpx 60px;
+		position: relative;
+		display: block;
+		z-index: 0;
+		font-size: 12px;
+
+		&:not([class*="diy-icon-"])::before {
+			content: "\e763";
+		}
+
+		
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 1px;
+			background-color: #ddd;
+			left: 60rpx;
+			height: 100%;
+			top: 0;
+			z-index: 8;
+		}
+
+		&::before {
+			font-size: 36rpx;
+			display: block;
+			position: absolute;
+			top: 36rpx;
+			z-index: 9;
+			background-color: var(--white);
+			width: 50rpx;
+			height: 50rpx;
+			text-align: center;
+			border: none;
+			line-height: 50rpx;
+			left: 36rpx;
+		}
+
+		>.content {
+			padding: 30rpx;
+			border-radius: 8rpx;
+			display: block;
+			line-height: 1.6;
+
+			&:not([class*="bg-"]) {
+				background-color: var(--ghostWhite);
+				color: var(--black);
+			}
+
+			+.content {
+				margin-top: 20rpx;
+			}
+		}
+
+	}
+
+	>.diygw-item:not([class*="text-"]) {
+		color: #ccc;
+	}
+}
+

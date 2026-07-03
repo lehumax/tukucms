@@ -1,0 +1,92 @@
+
+
+/* ==================
+          文本
+ ==================== */
+
+ @import './var.scss';
+
+ @mixin set-text-type($type) {
+	.text-#{$type},
+	.diygw-line-#{$type},
+	.diygw-lines-#{$type} {
+	  color: var(--#{$type});
+	}
+  
+	.diygw-line-#{$type}::after,
+	.diygw-lines-#{$type}::after {
+	  border-color: var(--#{$type});
+	}
+  
+	.text-shadow[class*="-#{$type}"] {
+	  text-shadow: var(--ShadowSize) var(--#{$type}Shadow);
+	}
+}
+
+
+@each $type in $diygw-colors {
+    @include set-text-type($type);
+}
+
+
+@mixin set-size($type) {
+	@if $type == none {
+		.diygw-text {
+			font-size: map-get($diygw-font-sizes, $type);
+		}
+	} @else {
+		.diygw-text-#{$type} {
+			font-size: map-get($diygw-font-sizes, $type);
+		}
+	}
+	
+}
+
+@each $type in $diygw-sizes {
+    @include set-text-type($type);
+	@include set-size($type);
+}
+
+.text-cut {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.text-bold {
+	font-weight: bold;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-content {
+	line-height: 1.6;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+@for $i from 1 through 5 {
+	.diygw-text-line#{$i} {
+		// vue下，单行和多行显示省略号需要单独处理
+		@if $i == '1' {
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		} @else {
+			display: -webkit-box !important;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			word-break: break-all;
+			-webkit-line-clamp: $i;
+			-webkit-box-orient: vertical!important;
+		}
+	}
+}

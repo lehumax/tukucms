@@ -1,0 +1,10 @@
+/* ==================
+        折叠面板
+==================== */
+
+.diy-collapse-icon{
+    transition: transform 0.6s;
+}
+.diy-collapse-active{
+    transform: rotateZ(-180deg);
+}

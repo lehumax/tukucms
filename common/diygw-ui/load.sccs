@@ -1,0 +1,95 @@
+
+.diygw-load {
+	display: block;
+	line-height: 3em;
+	text-align: center;
+}
+
+.diygw-load::before {
+	font-family: "diygwIcon";
+	display: inline-block;
+	margin-right: 6rpx;
+}
+
+.diygw-load.loading::before {
+	content: "\e67a";
+	animation: diygwIcon-spin 2s infinite linear;
+}
+
+.diygw-load.loading::after {
+	content: "加载中...";
+}
+
+.diygw-load.over::before {
+	content: "\e64a";
+}
+
+.diygw-load.over::after {
+	content: "没有更多了";
+}
+
+.diygw-load.erro::before {
+	content: "\e658";
+}
+
+.diygw-load.erro::after {
+	content: "加载失败";
+}
+
+.diygw-load.load-icon::before {
+	font-size: 32rpx;
+}
+
+.diygw-load.load-icon::after {
+	display: none;
+}
+
+.diygw-load.load-icon.over {
+	display: none;
+}
+
+.diygw-load.load-modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 140rpx;
+	left: 0;
+	margin: auto;
+	width: 260rpx;
+	height: 260rpx;
+	background-color: var(--white);
+	border-radius: 10rpx;
+	box-shadow: 0 0 0rpx 2000rpx rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 28rpx;
+	z-index: 9999;
+	line-height: 2.4em;
+}
+
+.diygw-load.load-modal [class*="diygwIcon-"] {
+	font-size: 60rpx;
+}
+
+.diygw-load.load-modal image {
+	width: 70rpx;
+	height: 70rpx;
+}
+
+.diygw-load.load-modal::after {
+	content: "";
+	position: absolute;
+	background-color: var(--white);
+	border-radius: 50%;
+	width: 200rpx;
+	height: 200rpx;
+	font-size: 20rpx;
+	border-top: 6rpx solid rgba(0, 0, 0, 0.05);
+	border-right: 6rpx solid rgba(0, 0, 0, 0.05);
+	border-bottom: 6rpx solid rgba(0, 0, 0, 0.05);
+	border-left: 6rpx solid var(--orange);
+	animation: diygwIcon-spin 1s infinite linear;
+	z-index: -1;
+}

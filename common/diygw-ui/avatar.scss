@@ -1,0 +1,97 @@
+/* ==================
+          头像
+ ==================== */
+.diygw-avatar {
+  font-variant: small-caps;
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #ccc;
+  color: var(--white);
+  white-space: nowrap;
+  position: relative;
+  width: 96rpx;
+  height: 96rpx;
+  background-size: cover;
+  background-position: center;
+  vertical-align: middle;
+  font-size: 32rpx;
+  
+   &.diygw-avatar-button{
+	  padding:0;
+	  margin-left:auto;
+	  margin-right:auto;
+  }
+  
+  [class*="diy-icon-"]{
+    font-size: 56rpx;
+  }
+  &.bg-none{
+    background-color: inherit;
+  }
+
+  .diygw-avatar-img{
+    width:100%;
+    height:100%;
+  }
+
+}
+
+$avatar-sizes: (
+	"none": 64rpx,
+	"xs": 48rpx,
+	"sm": 64rpx,
+	"md": 96rpx,
+	"lg": 128rpx,
+	"xl": 200rpx,
+);
+
+$avatar-font-sizes: (
+	"none": 32rpx,
+	"xs": 24rpx,
+	"sm": 32rpx,
+	"md": 48rpx,
+	"lg": 72rpx,
+	"xl": 100rpx,
+);
+
+@mixin set-avatar($type) {
+  .diygw-avatar.#{$type} {
+    width: map-get($avatar-sizes, $type);
+    height: map-get($avatar-sizes, $type);
+    font-size: map-get($avatar-font-sizes, $type);
+    
+    [class*="diy-icon-"]{
+        font-size: map-get($avatar-font-sizes, $type);
+    }
+  }
+}
+
+@each $type in $diygw-sizes {
+  @include set-avatar($type);
+}
+
+.diygw-avatar .avatar-text {
+  font-size: 0.4em;
+}
+
+.diygw-avatar-group {
+  unicode-bidi: bidi-override;
+  padding: 0 10rpx 0 20rpx;
+  display: inline-block;
+}
+.diygw-avatar-group.rtl{
+  direction: rtl;
+  padding:0rpx;
+}
+.diygw-avatar-group .diygw-avatar {
+  margin-left: -30rpx;
+  vertical-align: middle;
+}
+.diygw-avatar-group .diygw-avatar.xs {
+  margin-left: -16rpx;
+}
+.diygw-avatar-group .diygw-avatar.sm {
+  margin-left: -20rpx;
+}

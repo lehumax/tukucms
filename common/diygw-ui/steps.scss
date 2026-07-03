@@ -1,0 +1,224 @@
+
+
+/* ==================
+          步骤条
+ ==================== */
+
+.diygw-steps {
+	display: flex;
+	width: 100%;
+
+
+	.diygw-step-item {
+		flex: 1;
+		text-align: center;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+
+
+		&:not([class*="text-"]) {
+			color: var(--grey);
+		}
+
+
+
+		[class*="diy-icon-"]{
+			display: block;
+			font-size: 24px;
+			line-height: 40px;
+
+
+		}
+
+		&::before, &::after{
+			content: "";
+			display: block;
+			position: absolute;
+			height: 0px;
+			width: calc(100% - 40px);
+			border-bottom: 1px solid #ccc;
+			left: calc(0px - (100% - 40px) / 2);
+			top: 20px;
+			z-index: 0;
+		}
+
+
+
+		&::after {
+			border-bottom: 1px solid currentColor;
+			width: 0px;
+			transition: all 0.3s ease-in-out 0s;
+		}
+
+		&:first-child::before,
+		&:first-child::after {
+			display: none;
+		}
+
+		.num {
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			line-height: 30px;
+			margin: 10px auto;
+			font-size: 24px;
+			border: 1px solid currentColor;
+			position: relative;
+			overflow: hidden;
+		}
+
+		&.small{
+			.num{
+				width: 20px;
+				height: 20px;
+				line-height: 20px;
+				font-size: 12px;
+			}
+			[class*="diy-icon-"]{
+				font-size:16px;
+			}
+
+
+		}
+
+		&.middle{
+			.num{
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+			}
+			[class*="diy-icon-"]{
+				font-size:30px;
+			}
+		}
+		&.large{
+			.num{
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+			}
+
+			[class*="diy-icon-"]{
+				font-size:40px;
+			}
+
+		}
+
+		.num::before,.num::after {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			transition: all 0.3s ease-in-out 0s;
+			transform: translateY(0px);
+		}
+
+		.num::after {
+			content: attr(data-index);
+			color: #333;
+			transition: all 0.3s ease-in-out 0s;
+		}
+	}
+
+	&.steps-arrow{
+		.diygw-step-item::before,
+		.diygw-step-item::after {
+			content: "\e71a";
+			font-family: "diygwui";
+			height: 15px;
+			border-bottom-width: 0px;
+			line-height: 15px;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			color: #ccc;
+		}
+		.diygw-step-item::after{
+			display: none;
+		}
+	}
+
+	&.steps-numbers{
+		.diygw-step-item{
+			&::before, &::after{
+				top:25px;
+			}
+
+			&.small{
+				&::before, &::after{
+					top:20px;
+				}
+
+			}
+
+			&.middle{
+				&::before, &::after{
+					top:30px;
+					left: calc(0px - (100% - 50px) / 2);
+					width: calc(100% - 50px);
+				}
+			}
+
+			&.large{
+				&::before, &::after{
+					top:40px;
+					left: calc(0px - (100% - 60px) / 2);
+					width: calc(100% - 60px);
+				}
+			}
+		}
+
+	}
+	&.steps-top{
+		.diygw-step-item{
+			flex-direction: column-reverse;
+		}
+		.diygw-step-item::before,.diygw-step-item::after {
+			bottom: 20px;
+			top: initial;
+		}
+	}
+
+	.diygw-step-item[class*="text-"] {
+
+		&::after,&::before {
+			width: calc(100% - 40px);
+			color: currentColor;
+		}
+
+		.num{
+			background-color: currentColor;
+		}
+
+		.num::before {
+			color: var(--white);
+			transform: translateY(0px);
+		}
+		.num::after {
+			display: none;
+		}
+
+	}
+}
+
+scroll-view .diygw-steps {
+	display: flex;
+	white-space: nowrap;
+	flex-direction: row;
+	.uni-scroll-view-content{
+		flex-direction: row;
+		display: flex;
+	}
+}
+
+scroll-view .diygw-steps .diygw-step-item {
+	display: flex;
+	min-width: 160rpx;
+	flex-shrink: 0;
+}
+
+
+

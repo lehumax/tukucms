@@ -1,0 +1,36 @@
+.diygw-floatbar,.right-top,.right-bottom,.left-top,.left-bottom {
+  position: fixed;
+  z-index: 9999;
+  white-space: nowrap;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+
+  .diygw-grid.diygw-actions{
+      flex-direction: column;
+      .diygw-action{
+        padding:10rpx;
+      }
+      
+  }
+  &.inline{
+      .diygw-grid-inner{
+          flex-direction: row !important;
+          .diygw-grid-title{
+            margin-left:10rpx;
+          }
+      }
+  }
+}
+
+.right-top,.right-bottom {
+  right: 0px;
+}
+
+.left-top,.left-bottom {
+  left: 0px;
+}
+
+.left-top {
+  right: 0px;
+}

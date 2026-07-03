@@ -1,0 +1,38 @@
+@import "./var.scss";
+@mixin set-radius($type) {
+  @if $type == none {
+    .radius,.radius[class*="line"]::after {
+      border-radius: 2000px;
+    }
+  } @else {
+    .radius-#{$type}{
+      border-radius: map-get($diygw-radius-width, $type);
+    }
+    .radius-#{$type}[class*="line"]::after  {
+      border-radius: map-get($diygw-radius2-width, $type);
+    }
+  }
+}
+
+@each $type in $diygw-sizes {
+  @include set-radius($type);
+}
+.radius-left,.radius-left[class*="line"]::after {
+  border-top-left-radius: 2000px !important;
+  border-bottom-left-radius: 2000px !important;
+}
+
+.radius-right,.radius-right[class*="line"]::after {
+  border-top-right-radius: 2000px !important;
+  border-bottom-right-radius: 2000px !important;
+}
+
+.radius-top,.radius-top[class*="line"]::after {
+  border-top-left-radius: 2000px !important;
+  border-top-right-radius: 2000px !important;
+}
+
+.radius-bottom,.radius-bottom[class*="line"]::after {
+  border-bottom-left-radius: 2000px !important;
+  border-bottom-right-radius: 2000px !important;
+}

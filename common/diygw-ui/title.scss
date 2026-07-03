@@ -1,0 +1,38 @@
+/* ==================
+         标题栏
+ ==================== */
+
+.diygw-title {
+	display: flex;
+	position: relative;
+	align-items: center;
+	min-height: 90rpx;
+	flex:1;
+	padding:0 20rpx;
+	justify-content: space-between;
+
+	[class*=diy-icon-]{
+		font-size: inherit;
+	}
+
+	.title{
+		font-size: 36rpx;
+	}
+	.title-bar-icon{
+		font-size:36rpx;
+	}
+
+	.back-text{
+		font-size:24rpx;
+	}
+	.more{
+		font-size: 24rpx;
+	}
+}
+/* #ifdef MP */
+.diy-navbar{
+	.diygw-title{
+		padding-right: 200rpx;
+	}
+}
+/* #endif */
